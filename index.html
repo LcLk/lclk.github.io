@@ -8,8 +8,12 @@
   <script type="text/javascript" src="js/vendor/angular-animate.js"></script>
   <script type="text/javascript" src="js/vendor/angular-touch.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/blog.css">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
 
   <body ng-app="MyApp">
     <nav ng-controller="NavCtrl" class="">
@@ -30,10 +34,7 @@
     </nav>
 
     <div class="hide-scroll">
-      <div class="viewport">
-        <main ng-view >
-
-        </main>
+      <div class="viewport" ng-view >
       </div>
     </div>
     
