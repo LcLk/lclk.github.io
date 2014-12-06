@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+  <script type="text/javascript" src="js/vendor/gsap/uncompressed/TweenLite.js"></script>
+  <script type="text/javascript" src="js/vendor/angular.js"></script>
+  <script type="text/javascript" src="js/vendor/angular-route.js"></script>
+  <script type="text/javascript" src="js/vendor/angular-animate.js"></script>
+  <script type="text/javascript" src="js/vendor/angular-touch.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <body ng-app="MyApp">
+    <nav ng-controller="NavCtrl" class="">
+      <div class="title">
+        liam.krewer.me
+        <div class="subtitle">
+          {{subtitle}}
+        </div>
+      </div>
+      <ul class="">
+        <li ng-repeat="section in sections" class="" ng-class="isActive(section.url)">
+          <a ng-href="#!{{section.url}}" class="color-{{section.color}}">
+            <i class="fa fa-{{section.icon}}"></i>
+            {{section.text}}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hide-scroll">
+      <div class="viewport">
+        <main ng-view >
+
+        </main>
+      </div>
+    </div>
+    
   </body>
+
 </html>

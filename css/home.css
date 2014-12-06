@@ -1,0 +1,12 @@
+
+#home .content h1 {
+  background-color: #3D91FF;
+}
+
+#home .content h1::before {
+  background-color: #1266D4;
+}
+
+#home header {
+  color: #63B7FF;
+}

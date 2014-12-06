@@ -1,0 +1,131 @@
+html {
+  font-family:Verdana, Geneva, sans-serif;
+  top:0px;
+  background-attachment: fixed;
+  height:100%;
+  padding:0px;
+  margin:0px;
+  background-color: #222;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 15px,
+    rgba(0,0,0,0.1) 15px,
+    rgba(0,0,0,0.1) 30px
+  );
+}
+
+body {
+  z-index:10;
+  padding-top: 40px;
+}
+
+nav {
+  width:100%;
+  height:40px;
+  position:fixed;
+  top:0px;
+  background-color: #222;
+  z-index:1000;
+  box-shadow: 0px 0px 4px 8px rgba(39, 39, 39, 0.5);
+  border-bottom: 3px solid #AEAEAE;
+}
+nav .title {
+  float:left;
+  margin:8px 0 0 8px;
+  color: #eee;
+  font-size: 19px;
+}
+nav .title .subtitle{
+  font-size: 16px;
+}
+
+nav ul {
+  list-style: none;
+  float:right;
+  margin:8px 8px 0 0;
+}
+nav ul li {
+  display:inline-block;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  margin: 2px 5px;
+  padding: 3px 10px;
+  background-color: white;
+  transition: all 0.3s;
+}
+nav ul li a.color-blue:hover, 
+nav ul li.active a.color-blue  {
+  color:white;
+  background-color:#3D91FF;
+}
+nav ul li a.color-yellow:hover, 
+nav ul li.active a.color-yellow  {
+  color:white;
+  background-color: rgba(230, 178, 0, 1);
+}
+nav ul li a.color-green:hover, 
+nav ul li.active a.color-green {
+  color:white;
+  background-color:#149C14;
+}
+.hide-scroll {
+  position:absolute;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  overflow:hidden;
+}
+.viewport {
+  padding-top: 50px;
+  overflow:auto;
+  max-height: 100%;
+  padding-right: 100px;
+  margin-right: -100px;
+}
+
+main .content {
+  position: relative;
+  max-width:800px;
+  margin:10px auto;
+  height:200px;
+  background-color: #E1E1E1;
+}
+
+main .content h1 {
+  font-weight: normal;
+  position:relative;
+  display:inline-block;
+  z-index:10px;
+  margin-top:10px;
+  margin-left:-30px;
+  background-color: #555;
+  color:white;
+  padding:5px 50px;
+}
+
+main .content h1::before{
+  content:"";
+  position: absolute;
+  height:1.5em;
+  width:45px;
+  background-color: #444;
+  left: 7px;
+  top: 11px;
+  z-index: -1;
+  transform: rotate(20deg);
+}
+
+main header {
+  max-width:800px;
+  margin:50px auto;
+  font-size: 57px;
+  color:white;
+  text-align:center;
+}
+
+
+
