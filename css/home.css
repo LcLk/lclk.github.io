@@ -1,9 +1,9 @@
 
-#home .content h1 {
+#home .content header {
   background-color: #3D91FF;
 }
 
-#home .content h1::before {
+#home .content header::before {
   background-color: #1266D4;
 }
 

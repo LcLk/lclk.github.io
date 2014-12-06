@@ -1,9 +1,9 @@
 
-#profile .content h1 {
+#profile .content header {
   background-color: #149C14;
 }
 
-#profile .content h1::before {
+#profile .content header ::before {
   background-color: #026702;
 }
 

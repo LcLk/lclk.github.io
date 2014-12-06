@@ -1,10 +1,10 @@
 
 
-#blog .content h1 {
+#blog .content header{
   background-color: #E6B200;
 }
 
-#blog .content h1::before {
+#blog .content header::before {
   background-color: #804D00;
 }
 
