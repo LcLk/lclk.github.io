@@ -134,14 +134,14 @@ main .content header h3 {
   font-size: 16px;
 }
 
-main .content header ::before{
+main .content header::before{
   content:"";
   position: absolute;
-  height:1.5em;
+  height:30px;
   width:45px;
   background-color: #444;
   left: 7px;
-  top: 11px;
+  bottom: -9px;
   z-index: -1;
   transform: rotate(20deg);
 }

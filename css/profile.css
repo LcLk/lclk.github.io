@@ -3,7 +3,7 @@
   background-color: #149C14;
 }
 
-#profile .content header ::before {
+#profile .content header::before {
   background-color: #026702;
 }
 
