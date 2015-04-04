@@ -1,0 +1,8 @@
+#internal-navigator {
+  position:fixed;
+  width:100px;
+  height: 100px;
+  background-color: white;
+  top:100px;
+  right:20px;
+}

@@ -7,6 +7,12 @@
   <script type="text/javascript" src="js/vendor/angular-route.js"></script>
   <script type="text/javascript" src="js/vendor/angular-animate.js"></script>
   <script type="text/javascript" src="js/vendor/angular-touch.js"></script>
+  <!-- APP specific code -->
+  <script type="text/javascript" src="nav/js/controller.js"></script>
+  <script type="text/javascript" src="nav/js/directive.js"></script>
+  <script type="text/javascript" src="blog/js/controller.js"></script>
+  <script type="text/javascript" src="home/js/controller.js"></script>
+  <script type="text/javascript" src="profile/js/controller.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 
   <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.css">
@@ -14,8 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="css/blog.css">
   <link rel="stylesheet" type="text/css" href="css/profile.css">
-
-  <body ng-app="MyApp">
+  <body ng-app="lclk">
     <nav ng-controller="NavCtrl" class="">
       <div class="title">
         liam.krewer.me
@@ -32,6 +37,8 @@
         </li>
       </ul>
     </nav>
+
+    <internal-nav> If this directive is correctly loaded then this text shouldn't show</internal-nav>
 
     <div class="hide-scroll">
       <div class="viewport" ng-view >

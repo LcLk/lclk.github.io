@@ -1,4 +1,9 @@
-app = angular.module('MyApp',['ngRoute']);
+app = angular.module('lclk', [
+  'ngRoute',
+  'lclk.blog',
+  'lclk.home',
+  'lclk.nav',
+  'lclk.profile']);
 
 console.log("app loaded")
 
