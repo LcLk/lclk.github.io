@@ -1,4 +1,4 @@
-angular.module('lclk.nav',[]).directive( 'internalNav', function() {
+angular.module('lclk.nav').directive( 'internalNav', function() {
 	return {
 		restrict: 'E',
 		templateUrl: "nav/html/internal_nav.html",

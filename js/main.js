@@ -5,8 +5,6 @@ app = angular.module('lclk', [
   'lclk.nav',
   'lclk.profile']);
 
-console.log("app loaded")
-
 app.config( function($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('!');
     $routeProvider.
@@ -26,44 +24,3 @@ app.config( function($routeProvider, $locationProvider) {
         redirectTo: "/home" 
       });
 });
-
-app.controller('NavCtrl', function($scope,$location){
-  $scope.test = "Hello World";
-  $scope.sections = [
-    {
-      url:"home",
-      text:"Home",
-      icon: "home",
-      color: "blue"
-    },
-    {
-      url:"blog",
-      text:"Blog",
-      icon: "paragraph",
-      color: "yellow"
-    },
-    {
-      url:"profile",
-      text:"Profile",
-      icon: "user",
-      color: "green"
-    }
-  ];
-
-  // Is the current tab the active partial?
-  $scope.isActive = function(path) {
-    if ($location.path().substr(1, path.length) == path) {
-      return "active"
-    } else {
-      return ""
-    }
-  }
-
-});
-
-app.controller('BlogCtrl', function($scope){
-  $scope.test = "Hello Blog World";
-});
-
-
-
