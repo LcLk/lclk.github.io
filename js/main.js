@@ -8,19 +8,12 @@ app = angular.module('lclk', [
 app.config( function($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('!');
     $routeProvider.
-      when("/home", { 
-        templateUrl: "home/index.html",
-        controller: "HomeCtrl"
-      }).
-      when("/blog", { 
-        templateUrl: "blog/index.html",
-        controller: "BlogCtrl"
-      }).
-      when("/profile", { 
-        templateUrl: "profile/index.html",
-        controller: "ProfileCtrl"
+      when('/sections/:section', {
+        templateUrl: function(args){
+          return "sections/" + args.section + "/index.html"
+        }
       }).
       otherwise( { 
-        redirectTo: "/home" 
+        redirectTo: "/sections/home" 
       });
 });
