@@ -49,4 +49,13 @@ angular.module('lclk.nav').directive( 'internalNav', function() {
       }
     }
   };
+}]).directive( 'footerBar', [ function($routeParams) {
+  return {
+    restrict: 'E',
+    scope: {
+    },
+    templateUrl: "modules/nav/html/sections/footer_bar.html",
+    link: function(scope, element){
+    }
+  };
 }]);

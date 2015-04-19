@@ -1,28 +1,37 @@
-<main id="home">
+<main id="home" ng-controller="HomeCtrl">
   
   <header>
-    Welcome to my Website
+    Hello :)
   </header>
 
-  <div class="content">
-    <header>
-      <h1>Who am I?</h1>
-    </header>
-    
-  </div>
 
-  <div class="content">
-    <header>
-      <h1>What is this place?</h1>
-    </header>
 
-  </div>
+  <segment>
+    <segment-header sub-title="">
+      Who am I?
+    </segment-header>
+    <p>
+      My name is Liam Krewer. I'm a {{age}} year old web developer from Galway, Ireland. I studied Computer Engineering in NUIG and graduated with a 1st Class Honours Degree in October 2014. Since then I've been working with the local startup <a href="http://www.onepagecrm.com">OnePageCRM<i class="fa fa-external-link"></i></a> as a full stack RoR developer.
+    </p>
+  </segment>
+  
+  <segment>
+    <segment-header sub-title="">
+      Where are you?
+    </segment-header>
+    <p>
+      This is my personal website, a place primarily designed as a portfolio and blog, but primarily used to experiment with the latest web technologies on (which is my way of procrastinating while I'm supposed to do the former). I will eventually get around to writing content for my <a href="">blog</a>. Until then do check out my <a href="">profile</a> to see my skills, interests and past achievements.
+    </p>
+  </segment>
+  
+  <segment>
+    <segment-header sub-title="">
+      But... why?
+    </segment-header>
+    <p>
+      What's the point of a personal website in the age of social media platforms? Honestly, I'm not sure they aren't going extinct. But I've never been a fan of Facebook, Twitter and company so here is my try at having an online presence. 
+    </p>
+  </segment>
 
-  <div class="content">
-    <header>
-      <h1>What's for lunch?</h1>
-    </header>
-
-  </div>
-
+  <footer-bar></footer-bar>
 </main>

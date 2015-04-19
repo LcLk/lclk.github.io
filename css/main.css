@@ -18,6 +18,7 @@ html {
 body {
   z-index:10;
   padding-top: 40px;
+  padding-bottom:40px;
 }
 
 nav {
@@ -152,6 +153,9 @@ main .content p {
   margin-top: -20px;
   text-indent: 2em;
 }
+main .content a {
+  text-indent: 3px;
+}
 
 main header {
   max-width:800px;
@@ -159,6 +163,39 @@ main header {
   font-size: 57px;
   color:white;
   text-align:center;
+}
+a,
+a:hover,
+a:active {
+  color: #007AAA;
+  text-decoration: none;
+}
+
+main footer-bar segment .content{
+  background-color: transparent;
+}
+main footer-bar segment .content ul{
+  list-style: none;
+  text-align: center;
+}
+main footer-bar segment .content ul li{
+  margin:8px;
+}
+main footer-bar segment .content ul li:first-child{
+  margin-left:0px;
+}
+main footer-bar segment .content ul li:last-child{
+  margin-right:0px;
+}
+main footer-bar segment .content ul li{
+  display: inline-block;
+  color:white;
+}
+main footer-bar segment .content ul li a,
+main footer-bar segment .content ul li a:hover,
+main footer-bar segment .content ul li a:active{
+  color:white;
+  font:20px;
 }
 
 @media screen and (max-device-width: 500px) {
