@@ -1,12 +1,16 @@
-angular.module('lclk.nav').directive( 'internalNav', function() {
+angular.
+  module('lclk.nav').directive( 'internalNav', function() {
   return {
     restrict: 'E',
     templateUrl: "modules/nav/html/internal_nav.html",
     link: function(scope, element){
       console.log('linked!');
+      scope.active = true;
+      scope.showContents = true;
     }
   };
-}).directive( 'sectionsMenu', function() {
+}).
+  directive( 'sectionsMenu', function() {
   return {
     restrict: 'E',
     templateUrl: "modules/nav/html/sections/menu.html",
@@ -33,7 +37,8 @@ angular.module('lclk.nav').directive( 'internalNav', function() {
       ];
     }
   };
-}).directive( 'sectionsButton', ['$routeParams', function($routeParams) {
+}).
+  directive( 'sectionsButton', ['$routeParams', function($routeParams) {
   return {
     restrict: 'E',
     scope: {

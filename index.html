@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script type="text/javascript" src="js/vendor/gsap/uncompressed/TweenLite.js"></script>
   <script type="text/javascript" src="js/vendor/angular.js"></script>
@@ -21,6 +23,8 @@
   <link rel="stylesheet" type="text/css" href="sections/home/css/main.css">
   <link rel="stylesheet" type="text/css" href="sections/blog/css/main.css">
   <link rel="stylesheet" type="text/css" href="sections/profile/css/main.css">
+  <link rel="stylesheet" type="text/css" href="modules/nav/css/internal_nav.css"/>
+
   <body ng-app="lclk">
     <nav ng-controller="NavCtrl" class="">
       <div class="title">
@@ -32,10 +36,13 @@
       <sections-menu></sections-menu>
     </nav>
 
-    <internal-nav> If this directive is correctly loaded then this text shouldn't show</internal-nav>
+    <internal-nav></internal-nav>
 
     <div class="hide-scroll">
-      <div class="viewport" ng-view >
+      <div class="viewport">
+        <span id="top-of-page"></span> 
+        <div ng-view>
+        </div>
       </div>
     </div>
     

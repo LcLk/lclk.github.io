@@ -1,9 +1,67 @@
-#internal-navigator {
-  z-index:100;
+#internal-navigator .bar{
   position:fixed;
-  width:100px;
-  height: 100px;
-  background-color: white;
+  height: 25px;
+  background-color: transparent;
+  z-index:999;
+  border-bottom: 3px solid transparent;
+  color:transparent;
+  top:0;
+  right:0;
+  width:100%;
+  padding:5px;
+  transition:0.2s all;
+}
+#internal-navigator.active .bar {
+  background-color: rgba(34,34,34,0.9);
+  color:rgba(174,174,174,1);
+  border-bottom: 3px solid rgba(174,174,174,1);
+  top:45px;
+}
+
+#internal-navigator .icon{
+  position:fixed;
+  right:5px;
+  top:45px; 
+  cursor: pointer;
+}
+#internal-navigator .icon:hover i{
+  color:rgba(255,255,255,1);
+}
+#internal-navigator .icon i{
+  color:rgba(174,174,174,1);
+  font-size:35px;
+  transform: rotate(90deg);
+  transition: 0.2s all;
+}
+#internal-navigator.active .icon i{
+  transform: rotate(0deg);
+}
+
+#internal-navigator .options {
+  padding:4px 0;
+  margin:0 50px;
+  list-style: none;
+  float:right;
+}
+#internal-navigator .options li{
+  color:rgba(174,174,174,1);
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+}
+#internal-navigator .options li:hover,
+#internal-navigator .options li.active,{
+  color:rgba(255,255,255,1);
+}
+
+#table-of-contents {
+  display:none;
+  position:fixed;
+  left:0px;
   top:100px;
-  right:20px;
+  max-width:200px;
+  background-color: #aeaeae;
+}
+#table-of-contents.active {
+  display: block;
 }
