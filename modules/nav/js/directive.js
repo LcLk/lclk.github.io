@@ -29,7 +29,7 @@ angular.module('lclk.nav')
     link: function($scope, $element){
       // Init Variables
       $scope.active = false;
-      $scope.tocClass = 'fa fa-minus-circle';
+      $scope.tocClass = 'fa fa-plus-circle';
       $scope.table = eventService.nav.tableOfContents.table;
       
       // Event Listeners
@@ -42,6 +42,7 @@ angular.module('lclk.nav')
           $scope.showTOC = !$scope.showTOC;
           $scope.tocClass = $scope.showTOC ? 'fa fa-minus-circle': 'fa fa-plus-circle'
       };
+      $scope.toggleTOC();
     }
   };
 }])
@@ -82,6 +83,11 @@ angular.module('lclk.nav')
         $scope.active = !$scope.active;
         eventService.nav.sidebar.toggle($scope.active);
       });
+
+      setTimeout(function(){
+        $scope.active = !$scope.active;
+        eventService.nav.sidebar.toggle($scope.active);
+      },0);
     }
   };
 }])
