@@ -46,7 +46,7 @@ angular.module('lclk.nav')
     }
   };
 }])
- .directive( 'tocItem', ['$compile', '$location', '$anchorScroll', function($compile, $location, $anchorScroll) {
+ .directive( 'tocItem', ['$compile', '$location', '$anchorScroll', 'eventService', function($compile, $location, $anchorScroll, eventService) {
   return {
     restrict: 'E',
     scope: {
@@ -57,6 +57,9 @@ angular.module('lclk.nav')
       $element.find('a').on('click', function() {
         $location.hash($scope.item.id);
         $anchorScroll();
+        if(window.innerWidth < 500){
+          eventService.nav.sidebar.hide();
+        }
       });
       // recursive directives cause infinite loops, so if there is another list in an item,
       // it has to be compiled and added into the directive here
@@ -83,11 +86,6 @@ angular.module('lclk.nav')
         $scope.active = !$scope.active;
         eventService.nav.sidebar.toggle($scope.active);
       });
-
-      setTimeout(function(){
-        $scope.active = !$scope.active;
-        eventService.nav.sidebar.toggle($scope.active);
-      },0);
     }
   };
 }])
