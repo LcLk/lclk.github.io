@@ -80,31 +80,23 @@ nav sections-menu li.active a.color-green {
   color:white;
   background-color:#149C14;
 }
-.hide-scroll {
-  position:absolute;
-  left:0px;
-  right:0px;
-  top:0px;
-  bottom:0px;
-  overflow:hidden;
-}
 .viewport {
-  overflow:auto;
   max-height: 100%;
-  padding-right: 100px;
-  margin-right: -100px;
 }
 #top-of-page {
   height:0;
 }
 view {
-  padding-top: 50px;
   display: block;
+  padding-top: 50px;
   margin-right:0;
   transition: 0.5s all;
 }
 view.pushed {
   margin-right:210px;
+}
+page {
+  display:block;
 }
 page segment {
   display:block;
