@@ -49,7 +49,6 @@ nav .title {
 nav .title .subtitle{
   font-size: 16px;
 }
-
 nav sections-menu ul {
   list-style: none;
   float:right;
@@ -90,14 +89,25 @@ nav sections-menu li.active a.color-green {
   overflow:hidden;
 }
 .viewport {
-  padding-top: 50px;
   overflow:auto;
   max-height: 100%;
   padding-right: 100px;
   margin-right: -100px;
 }
-
-main .content {
+#top-of-page {
+  height:0;
+}
+view {
+  padding-top: 50px;
+  display: block;
+  margin-right:0;
+  transition: 0.5s all;
+}
+view.pushed {
+  margin-right:210px;
+}
+page segment {
+  display:block;
   position: relative;
   max-width:800px;
   margin:10px auto;
@@ -106,7 +116,7 @@ main .content {
   background-color: #E1E1E1;
 }
 
-main .content header  {
+page segment header  {
   position:relative;
   display:inline-block;
   z-index:10px;
@@ -118,7 +128,7 @@ main .content header  {
   box-shadow: 3px 4px 6px 0px rgba(39, 39, 39, 0.5);
 }
 
-main .content header h1 {
+page segment header h1 {
   font-weight: normal;
   text-align: left;
   padding:0;
@@ -127,7 +137,7 @@ main .content header h1 {
   font-size: 28px;
 }
 
-main .content header h3 {
+page segment header h3 {
   font-weight: normal;
   text-align: left;
   padding:0;
@@ -136,7 +146,7 @@ main .content header h3 {
   font-size: 16px;
 }
 
-main .content header::before{
+page segment header::before{
   content:"";
   position: absolute;
   height:30px;
@@ -148,17 +158,17 @@ main .content header::before{
   transform: rotate(20deg);
 }
 
-main .content p {
+page segment p {
   font-size: 16px;
   padding:1px 20px 15px;
   margin-top: -20px;
   text-indent: 2em;
 }
-main .content a {
+page segment a {
   text-indent: 3px;
 }
 
-main header {
+page header {
   max-width:800px;
   margin:50px auto;
   font-size: 57px;
@@ -172,29 +182,29 @@ a:active {
   text-decoration: none;
 }
 
-main footer-bar segment .content{
+footer-bar segment{
   background-color: transparent;
 }
-main footer-bar segment .content ul{
+footer-bar segment ul{
   list-style: none;
   text-align: center;
 }
-main footer-bar segment .content ul li{
+footer-bar segment ul li{
   margin:8px;
 }
-main footer-bar segment .content ul li:first-child{
+footer-bar segment ul li:first-child{
   margin-left:0px;
 }
-main footer-bar segment .content ul li:last-child{
+footer-bar segment ul li:last-child{
   margin-right:0px;
 }
-main footer-bar segment .content ul li{
+footer-bar segment ul li{
   display: inline-block;
   color:white;
 }
-main footer-bar segment .content ul li a,
-main footer-bar segment .content ul li a:hover,
-main footer-bar segment .content ul li a:active{
+footer-bar segment ul li a,
+footer-bar segment ul li a:hover,
+footer-bar segment ul li a:active{
   color:white;
   font:20px;
 }
@@ -207,16 +217,16 @@ main footer-bar segment .content ul li a:active{
     float:none;
     padding-left:0;
   }
-  main header {
+  page header {
     font-size:40px;
   }
-  main .content {
+  page segment {
     margin: 10px;
   }
-  main .content header h1{
+  page segment header h1{
     font-size: 22px;
   }
-  main .content header h3{
+  page segment header h3{
     font-size: 14px;
   }
 }

@@ -12,7 +12,9 @@
   <!-- APP specific code -->
   <script type="text/javascript" src="modules/nav/js/controller.js"></script>
   <script type="text/javascript" src="modules/nav/js/directive.js"></script>
+  <script type="text/javascript" src="modules/nav/js/services.js"></script>
   <script type="text/javascript" src="modules/layout/js/directive.js"></script>
+  <script type="text/javascript" src="modules/layout/js/services.js"></script>
   <script type="text/javascript" src="sections/blog/js/controller.js"></script>
   <script type="text/javascript" src="sections/home/js/controller.js"></script>
   <script type="text/javascript" src="sections/profile/js/controller.js"></script>
@@ -36,13 +38,15 @@
       <sections-menu></sections-menu>
     </nav>
 
-    <internal-nav></internal-nav>
+   
+    <sidebar></sidebar>
 
     <div class="hide-scroll">
       <div class="viewport">
         <span id="top-of-page"></span> 
-        <div ng-view>
-        </div>
+        <view>
+        </view>
+        <footer-bar></footer-bar>
       </div>
     </div>
     

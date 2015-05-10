@@ -1,9 +1,9 @@
 
-#home .content header {
+#home segment header {
   background-color: #3D91FF;
 }
 
-#home .content header::before {
+#home segment header::before {
   background-color: #1266D4;
 }
 

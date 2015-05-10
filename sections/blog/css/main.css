@@ -1,10 +1,10 @@
 
 
-#blog .content header{
+#blog segment header{
   background-color: #E6B200;
 }
 
-#blog .content header::before {
+#blog segment header::before {
   background-color: #804D00;
 }
 

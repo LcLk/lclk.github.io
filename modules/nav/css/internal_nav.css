@@ -1,67 +1,56 @@
-#internal-navigator .bar{
-  position:fixed;
-  height: 25px;
-  background-color: transparent;
-  z-index:999;
-  border-bottom: 3px solid transparent;
-  color:transparent;
-  top:0;
-  right:0;
-  width:100%;
-  padding:5px;
-  transition:0.2s all;
+/*Sidebar*/
+/*Sidebar icon*/
+#sidebar-icon {
+  position:absolute;
+  color: #E1E1E1;
+  font-size:24px;
+  width:30px;
+  height:30px;
+  left:-32px;
+  top:5px;
+  padding: 2px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #222;
+  transition: 0.5s all;
 }
-#internal-navigator.active .bar {
-  background-color: rgba(34,34,34,0.9);
-  color:rgba(174,174,174,1);
-  border-bottom: 3px solid rgba(174,174,174,1);
-  top:45px;
-}
-
-#internal-navigator .icon{
-  position:fixed;
-  right:5px;
-  top:45px; 
-  cursor: pointer;
-}
-#internal-navigator .icon:hover i{
-  color:rgba(255,255,255,1);
-}
-#internal-navigator .icon i{
-  color:rgba(174,174,174,1);
-  font-size:35px;
+#sidebar-icon.active {
+  color:white;
   transform: rotate(90deg);
-  transition: 0.2s all;
-}
-#internal-navigator.active .icon i{
-  transform: rotate(0deg);
 }
 
-#internal-navigator .options {
-  padding:4px 0;
-  margin:0 50px;
-  list-style: none;
-  float:right;
-}
-#internal-navigator .options li{
-  color:rgba(174,174,174,1);
-  display: inline-block;
-  cursor: pointer;
-  font-weight: bold;
-}
-#internal-navigator .options li:hover,
-#internal-navigator .options li.active,{
-  color:rgba(255,255,255,1);
-}
 
-#table-of-contents {
-  display:none;
+#sidebar {
   position:fixed;
-  left:0px;
-  top:100px;
-  max-width:200px;
-  background-color: #aeaeae;
+  z-index:100;
+  right:-200px;
+  top:40px;
+  bottom:0;
+  width:190px;
+  color: #E1E1E1;
+  background-color: #222;
+  transition: 0.5s all;
+  box-shadow: 3px 4px 6px 0px rgba(39, 39, 39, 0.5);
+  padding:10px 5px;
 }
-#table-of-contents.active {
+#sidebar.active {
   display: block;
+  right:0px;
+}
+table-of-contents {
+  
+}
+table-of-contents ul {
+  list-style: none;
+  padding:0 0 0 10px;
+  margin:0;
+}
+table-of-contents ul li {
+  padding:0;
+  margin:0;
+}
+table-of-contents ul li a{
+  color:#E1E1E1;
+  text-decoration: none;
 }
